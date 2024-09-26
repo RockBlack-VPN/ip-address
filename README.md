@@ -5,3 +5,10 @@
 ![Screenshot](https://rockblack.su/images/Screenshot_153.jpg)
 > [!NOTE]
 > Таким способом выход в Youtube, Instagram и другие сервисы будет через VPN, а на другие сервисы и сайты через вашего провайдера.
+
+> [!TIP]
+> [VPN на роутер](https://rockblack.su/price)
+
+> [Телеграмм бот](https://t.me/Cripto_Plusbot)
+
+> [Телеграмм группа](https://t.me/criptoplus2022)
