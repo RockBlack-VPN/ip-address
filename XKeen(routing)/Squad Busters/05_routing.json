@@ -124,6 +124,7 @@
         "ext:geosite_v2fly.dat:tiktok",
         "ext:geosite_v2fly.dat:openai",
         "ext:geosite_v2fly.dat:youtube",
+        "ext:geosite_zkeen.dat:domains",
         "2ip.ru",
         "2ip.io"
         ]
