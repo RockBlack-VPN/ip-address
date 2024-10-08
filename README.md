@@ -45,7 +45,7 @@ ____
 ____
 
 > [!CAUTION]
-> Если после добавления маршрутов Instagram, он не работает, то нужно добавить DNS DoT и затем очистить кэш и куки приложения
+> Если после добавления маршрутов Instagram, он не работает, то нужно добавить **DNS DoT** и затем очистить кэш и куки приложения.
 
 `94.140.14.14`  dns.adguard-dns.com
 
@@ -60,6 +60,7 @@ ____
 `1.0.0.1`  cloudflare-dns.com
 
 ![Screenshot](https://rockblack.su/images/vless/DNS1.jpg)
+
 ![Screenshot](https://rockblack.su/images/vless/DNS2.jpg)
 
 
