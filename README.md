@@ -43,6 +43,26 @@
 ![Screenshot](https://rockblack.su/images/Screenshot_160.jpg)
 
 
+
+Если после добавления маршрутов Instagram, он все ровно не работает, то нужно добавить DNS DoT
+
+`94.140.14.14`  dns.adguard-dns.com
+
+`94.140.15.15` dns.adguard-dns.com
+
+`8.8.8.8`  dns.google
+
+`8.8.4.4`  dns.google
+
+`1.1.1.1` cloudflare-dns.com
+
+`1.0.0.1`  cloudflare-dns.com
+
+![Screenshot](https://rockblack.su/images/vless/DNS1.jpg)
+![Screenshot](https://rockblack.su/images/vless/DNS2.jpg)
+
+
+
 > [!TIP]
 > [VPN на роутер](https://rockblack.su/price)
 
