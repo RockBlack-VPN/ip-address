@@ -42,7 +42,7 @@
 
 ![Screenshot](https://rockblack.su/images/Screenshot_160.jpg)
 
-
+____
 
 > [!CAUTION]
 > Если после добавления маршрутов Instagram, он не работает, то нужно добавить DNS DoT и затем очистить кэш и куки приложения
