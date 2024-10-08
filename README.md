@@ -70,4 +70,4 @@ ____
 
 > [Телеграмм бот](https://t.me/Cripto_Plusbot)
 
-> [Телеграмм группа](https://t.me/criptoplus2022)
+> [Телеграмм группа](https://t.me/rockblack_vpn)
