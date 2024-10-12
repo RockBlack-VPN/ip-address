@@ -45,7 +45,7 @@ ____
 ____
 
 # DNS DoT
-:white_check_mark:Если после добавления маршрутов Instagram, Twitter и других сервисов, они не работают, то нужно добавить **DNS DoT** и затем очистить кэш и куки приложения. Для Windows, в cmd `ipconfig /flushdns`
+:white_check_mark:Если после добавления маршрутов Instagram, Twitter и других сервисов, они не работают, то нужно добавить **DNS DoT** и затем очистить кэш и куки приложения. Для Windows, в cmd `ipconfig /flushdns` - очистит локальный кэш DNS
 
 
 `94.140.14.14`  dns.adguard-dns.com
