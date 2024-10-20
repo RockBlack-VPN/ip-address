@@ -74,3 +74,9 @@ ____
 > [Телеграмм бот](https://t.me/Cripto_Plusbot)
 
 > [Телеграмм группа](https://t.me/rockblack_vpn)
+
+
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=RockBlack-VPN/ip-address&type=Date)](https://star-history.com/#RockBlack-VPN/ip-address&Date)
