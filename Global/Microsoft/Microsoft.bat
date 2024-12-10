@@ -11,3 +11,7 @@ route ADD 168.61.0.0 MASK 255.255.0.0 0.0.0.0  # Microsoft Azure
 route ADD 191.232.0.0 MASK 255.252.0.0 0.0.0.0  # Microsoft Global Network
 route ADD 207.46.0.0 MASK 255.255.0.0 0.0.0.0  # Microsoft
 route ADD 204.79.195.0 MASK 255.255.255.0 0.0.0.0  # Microsoft
+route ADD 13.107.6.0 MASK 255.255.255.0 0.0.0.0  # Microsoft Azure DevOpv Services
+route ADD 13.107.9.0 MASK 255.255.255.0 0.0.0.0  # Microsoft Azure DevOpv Services
+route ADD 13.107.42.0 MASK 255.255.255.0 0.0.0.0  # Microsoft Azure DevOpv Services
+route ADD 13.107.43.0 MASK 255.255.255.0 0.0.0.0  # Microsoft Azure DevOpv Services
