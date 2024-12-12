@@ -64,6 +64,8 @@ ____
 
 ![Screenshot](https://rockblack.su/images/vless/DNS2.jpg)
 
+Отключить **IPv6**
+
 ![Screenshot](https://rockblack.pro/images/Screenshot_33.jpg)
 
 
