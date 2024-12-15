@@ -86,9 +86,6 @@ ____
 
 ## create full list
 ```bash
-awk '1' Global-locked/* > locked.bat
-```
-
-```bash
-
+awk '1' Global-locked-in-ru/* > locked-in-ru.bat
+awk '1' RU-RU/* > ru-only.bat
 ```
