@@ -82,3 +82,13 @@ ____
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=RockBlack-VPN/ip-address&type=Date)](https://star-history.com/#RockBlack-VPN/ip-address&Date)
+
+
+## create full list
+```bash
+awk '1' Global-locked/* > locked.bat
+```
+
+```bash
+
+```
