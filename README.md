@@ -68,6 +68,11 @@ ____
 
 ![Screenshot](https://rockblack.pro/images/Screenshot_33.jpg)
 
+## Генерация листа на macos
+```bash
+awk '1' Global-locked-in-ru/* > locked-in-ru.bat
+awk '1' RU-RU/* > ru-only.bat
+```
 
 ____
 > [!TIP]
@@ -84,8 +89,3 @@ ____
 [![Star History Chart](https://api.star-history.com/svg?repos=RockBlack-VPN/ip-address&type=Date)](https://star-history.com/#RockBlack-VPN/ip-address&Date)
 
 
-## create full list
-```bash
-awk '1' Global-locked-in-ru/* > locked-in-ru.bat
-awk '1' RU-RU/* > ru-only.bat
-```
