@@ -45,7 +45,7 @@ ____
 ____
 
 # DNS DoT
-:white_check_mark:Если после добавления маршрутов Instagram, Twitter и других сервисов, они не работают, то нужно добавить **DNS DoT** и затем очистить кэш и куки приложения. Для Windows, в cmd `ipconfig /flushdns` - очистит локальный кэш DNS
+:white_check_mark:Если после добавления маршрутов Instagram, Twitter и других сервисов, они не работают, то нужно добавить **DNS DoT**, отключить **IPv6** и затем очистить кэш и куки приложения. Для Windows, в cmd `ipconfig /flushdns` - очистит локальный кэш DNS
 
 
 `94.140.14.14`  dns.adguard-dns.com
@@ -63,6 +63,10 @@ ____
 ![Screenshot](https://rockblack.su/images/vless/DNS1.jpg)
 
 ![Screenshot](https://rockblack.su/images/vless/DNS2.jpg)
+
+Отключить **IPv6**
+
+![Screenshot](https://rockblack.pro/images/Screenshot_33.jpg)
 
 
 ____
