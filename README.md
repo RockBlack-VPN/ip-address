@@ -43,6 +43,10 @@ ____
 ![Screenshot](https://rockblack.su/images/Screenshot_160.jpg)
 
 ____
+Поиск ip адресов по доменам https://rockblack.pro/ip-address.html
+![Screenshot](https://rockblack.pro/images/Screenshot_2.jpg)
+
+____
 
 # DNS DoT
 :white_check_mark:Если после добавления маршрутов Instagram, Twitter и других сервисов, они не работают, то нужно добавить **DNS DoT**, отключить **IPv6** и затем очистить кэш и куки приложения. Для Windows, в cmd `ipconfig /flushdns` - очистит локальный кэш DNS
