@@ -58,6 +58,8 @@ ____
 
 ![Screenshot](https://rockblack.pro/images/dot.png)
 
+Добавить DNS DoT
+
 `94.140.14.14`  dns.adguard-dns.com
 
 `94.140.15.15` dns.adguard-dns.com
