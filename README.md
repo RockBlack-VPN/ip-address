@@ -45,7 +45,7 @@ ____
 ____
 Поиск ip адресов по доменам https://rockblack.pro/ip-address.html
 
-Введите домены и нажмите Найти IP 
+Введите домены и нажмите **Найти IP**
 
 ![Screenshot](https://rockblack.pro/images/Screenshot_2.jpg)
 
