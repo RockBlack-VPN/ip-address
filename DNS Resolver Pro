@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>DNS Resolver Pro</title>
+<style>
+    body {
+      font-family: 'Helvetica Neue', 'Segoe UI', Arial, sans-serif;
+      margin: 0 auto;
+      padding: 30px;
+      max-width: 800px;
+      background: #0f0f0f;
+      color: #fff;
+      line-height: 1.6;
+    }
+    body.light-mode {
+      background: #f8f9fa;
+      color: #333;
+    }
+    h2 {
+      text-align: center;
+      font-size: 2.2em;
+      margin-bottom: 30px;
+      color: #4CAF50;
+    }
+    .input-group {
+      margin: 20px 0;
+    }
+    textarea {
+      width: 100%;
+      height: 150px;
+      padding: 15px;
+      border-radius: 8px;
+      border: 2px solid #2d2d2d;
+      background: #1a1a1a;
+      color: #fff;
+      font-family: 'Courier New', monospace;
+    }
+    body.light-mode textarea {
+      background: #fff;
+      border-color: #ddd;
+      color: #333;
+    }
+    .controls {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin: 25px 0;
+      justify-content: center;
+    }
+    select, button {
+      padding: 12px 20px;
+      border-radius: 8px;
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    select {
+      background: #1a1a1a;
+      color: #fff;
+      border: 2px solid #4CAF50;
+    }
+    body.light-mode select {
+      background: #fff;
+      border-color: #2196F3;
+      color: #333;
+    }
+    button {
+      background: linear-gradient(135deg, #4CAF50, #45a049);
+      color: white;
+    }
+    .theme-toggle {
+      background: linear-gradient(135deg, #673AB7, #512DA8);
+    }
+    pre {
+      background: #1a1a1a;
+      padding: 20px;
+      border-radius: 8px;
+      white-space: pre-wrap;
+      border: 2px solid #2d2d2d;
+      font-family: 'Courier New', monospace;
+    }
+    body.light-mode pre {
+      background: #fff;
+      border-color: #ddd;
+    }
+    .progress-container {
+      width: 100%;
+      height: 20px;
+      background-color: #1a1a1a;
+      border-radius: 10px;
+      margin: 20px 0;
+      overflow: hidden;
+      display: none;
+    }
+    .progress-bar {
+      height: 100%;
+      background: linear-gradient(90deg, #4CAF50, #45a049);
+      width: 0%;
+      transition: width 0.3s ease;
+      text-align: center;
+      color: white;
+      font-size: 12px;
+      line-height: 20px;
+    }
+    body.light-mode .progress-container {
+      background-color: #eee;
+    }
+    body.light-mode .progress-bar {
+      background: linear-gradient(90deg, #2196F3, #1976D2);
+    }
+  </style>
+</head>
+<body>
+  <h2>🔍 DNS Resolver Pro</h2>
+  
+  <div class="input-group">
+    <textarea id="domains" placeholder="Введите домены (каждый с новой строки)..."></textarea>
+  </div>
+
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar">0%</div>
+  </div>
+
+  <div class="controls">
+    <select id="format">
+      <option value="standard">Стандартный формат</option>
+      <option value="keenetic">Формат Keenetic</option>
+      <option value="keenetic_clear">Keenetic Clear</option>
+    </select>
+    <button onclick="resolveDomains()">🚀 Найти IP</button>
+    <button onclick="compressIPs()">Сжать IP-адреса</button>
+    <button class="theme-toggle" onclick="toggleTheme()">🌓 Сменить тему</button>
+  </div>
+
+  <pre id="result">Результаты появятся здесь...</pre>
+
+  <script>
+    async function fetchDNSFromResolver(resolverName, url) {
+      try {
+        const options = (resolverName === 'Cloudflare') 
+          ? { headers: { "accept": "application/dns-json" } }
+          : {};
+        const response = await fetch(url, options);
+        const data = await response.json();
+        return { resolver: resolverName, data };
+      } catch (error) {
+        return { resolver: resolverName, error: error.message };
+      }
+    }
+
+    async function resolveDomainWithResolvers(domain) {
+      const resolvers = [
+        { name: "Google", url: `https://dns.google/resolve?name=${domain}&type=A` },
+        { name: "Cloudflare", url: `https://cloudflare-dns.com/dns-query?name=${domain}&type=A` }
+      ];
+      const promises = resolvers.map(r => fetchDNSFromResolver(r.name, r.url));
+      return await Promise.all(promises);
+    }
+
+    async function resolveDomains() {
+      const domainsText = document.getElementById("domains").value;
+      const domains = domainsText.split('\n').map(domain => domain.trim()).filter(domain => domain !== "");
+      const format = document.getElementById("format").value;
+      const progressContainer = document.querySelector('.progress-container');
+      const progressBar = document.getElementById('progressBar');
+      
+      progressContainer.style.display = 'block';
+      progressBar.style.width = '0%';
+      progressBar.textContent = '0%';
+      
+      let output = "";
+      
+      if (domains.length === 0) {
+        document.getElementById("result").textContent = "Пожалуйста, введите хотя бы один домен.";
+        progressContainer.style.display = 'none';
+        return;
+      }
+
+      const totalDomains = domains.length;
+      let processed = 0;
+
+      const updateProgress = () => {
+        const percent = Math.round((processed / totalDomains) * 100);
+        progressBar.style.width = `${percent}%`;
+        progressBar.textContent = `${percent}%`;
+        
+        if (percent === 100) {
+          setTimeout(() => {
+            progressContainer.style.display = 'none';
+          }, 500);
+        }
+      };
+
+      if (format === "keenetic_clear") {
+        const uniqueIPs = new Set();
+        for (let domain of domains) {
+          try {
+            const results = await resolveDomainWithResolvers(domain);
+            results.forEach(result => {
+              if (result.data?.Answer) {
+                result.data.Answer
+                  .filter(ans => ans.type === 1)
+                  .forEach(ans => uniqueIPs.add(ans.data));
+              }
+            });
+          } catch (error) {}
+          processed++;
+          updateProgress();
+        }
+        output = Array.from(uniqueIPs)
+          .map(ip => `route add ${ip} mask 255.255.255.255 0.0.0.0`)
+          .join('\n');
+      } else {
+        for (let domain of domains) {
+          output += `Домен: ${domain}\n`;
+          try {
+            const results = await resolveDomainWithResolvers(domain);
+            results.forEach(result => {
+              output += `  [${result.resolver}]\n`;
+              if (result.error) {
+                output += `    Ошибка: ${result.error}\n`;
+              } else if (result.data?.Answer) {
+                const aRecords = result.data.Answer.filter(ans => ans.type === 1);
+                if (aRecords.length > 0) {
+                  aRecords.forEach(ans => {
+                    const ip = ans.data;
+                    if (format === "keenetic") {
+                      output += `    route add ${ip} mask 255.255.255.255 0.0.0.0\n`;
+                    } else {
+                      output += `    ${ip}\n`;
+                    }
+                  });
+                } else {
+                  output += `    Нет A записей.\n`;
+                }
+              } else {
+                output += `    Нет ответа.\n`;
+              }
+            });
+          } catch (error) {
+            output += `  Ошибка: ${error.message}\n`;
+          }
+          processed++;
+          updateProgress();
+          output += "\n";
+        }
+      }
+      
+      document.getElementById("result").textContent = output.trim() || "Не удалось получить IP-адреса.";
+      updateProgress();
+    }
+
+    function toggleTheme() {
+      document.body.classList.toggle('light-mode');
+    }
+
+    function compressIPs() {
+      const text = document.getElementById("result").textContent.trim();
+      const ipRegex = /\b(?:\d{1,3}\.){3}\d{1,3}\b/g;
+      const ips = text.match(ipRegex);
+
+      if (!ips || ips.length === 0) {
+        alert("Нет IP-адресов для сжатия.");
+        return;
+      }
+
+      const cidrMap = new Map();
+      
+      ips.forEach(ip => {
+        const octets = ip.split('.').map(Number);
+        if (ip !== "0.0.0.0" && ip !== "255.255.255.0") {
+          const network = `${octets[0]}.${octets[1]}.${octets[2]}.0/24`;
+          if (!cidrMap.has(network)) {
+            cidrMap.set(network, true);
+          }
+        }
+      });
+
+      if (cidrMap.size === 0) {
+        alert("Нет доступных IP-адресов для сжатия.");
+        return;
+      }
+
+      const sortedCidrs = Array.from(cidrMap.keys()).sort((a, b) => {
+        const aParts = a.split('.').map(Number);
+        const bParts = b.split('.').map(Number);
+        for (let i = 0; i < 3; i++) {
+          if (aParts[i] !== bParts[i]) {
+            return aParts[i] - bParts[i];
+          }
+        }
+        return 0;
+      });
+
+      const output = sortedCidrs
+        .map(cidr => `route add ${cidr.replace('/24', '')} mask 255.255.255.0 0.0.0.0`)
+        .join('\n');
+
+      document.getElementById("result").textContent = output;
+    }
+  </script>
+</body>
+</html>
