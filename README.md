@@ -100,6 +100,9 @@ ____
 > [Телеграмм бот](https://t.me/RockBlack_bot)
 
 > [Телеграмм группа](https://t.me/rockblack_vpn)
+>
+> Спасибо ребятам за собранные маршруты 
+https://yookassa.ru/my/i/aD3025LTifTf/l
 
 
 ____
