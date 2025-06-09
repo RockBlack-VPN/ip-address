@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>DNS Resolver Pro</title>
- <style>
+<style>
     body {
       font-family: 'Helvetica Neue', 'Segoe UI', Arial, sans-serif;
       margin: 0 auto;
@@ -115,7 +115,7 @@
   <h2>🔍 DNS Resolver Pro</h2>
   
   <div class="input-group">
-    <textarea id="domains" placeholder="Введите домены (каждый с новой строки)..."></textarea>
+    <textarea id="domains" placeholder="Введите домены (каждый с новой строки или в формате: &quot;example.com&quot;, https://example.com)"></textarea>
   </div>
 
   <div class="progress-container">
@@ -137,6 +137,31 @@
   <pre id="result">Результаты появятся здесь...</pre>
 
   <script>
+    function normalizeDomain(input) {
+      // Обработка URL (https://example.com)
+      if (input.includes('://')) {
+        try {
+          const url = new URL(input);
+          return url.hostname;
+        } catch (e) {
+          return input;
+        }
+      }
+      
+      // Обработка формата: 0: "example.com"
+      const match = input.match(/^\s*\d+\s*:\s*"([^"]+)"\s*$/);
+      if (match && match[1]) {
+        return match[1];
+      }
+      
+      // Обработка формата: "example.com"
+      if (input.startsWith('"') && input.endsWith('"')) {
+        return input.slice(1, -1);
+      }
+      
+      return input.trim();
+    }
+
     async function fetchDNSFromResolver(resolverName, url) {
       try {
         const options = (resolverName === 'Cloudflare') 
@@ -161,7 +186,8 @@
 
     async function resolveDomains() {
       const domainsText = document.getElementById("domains").value;
-      const domains = domainsText.split('\n').map(domain => domain.trim()).filter(domain => domain !== "");
+      const rawLines = domainsText.split('\n').filter(line => line.trim() !== "");
+      const domains = rawLines.map(normalizeDomain);
       const format = document.getElementById("format").value;
       const progressContainer = document.querySelector('.progress-container');
       const progressBar = document.getElementById('progressBar');
