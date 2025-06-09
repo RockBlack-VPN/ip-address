@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>DNS Resolver Pro</title>
+  <link rel="icon" href="https://rockblack.pro/images/favicon.ico" type="image/x-icon">
 <style>
     body {
       font-family: 'Helvetica Neue', 'Segoe UI', Arial, sans-serif;
@@ -115,7 +116,7 @@
   <h2>🔍 DNS Resolver Pro</h2>
   
   <div class="input-group">
-    <textarea id="domains" placeholder="Введите домены (каждый с новой строки в формате: example.com, www.example.com, https://example.com)"></textarea>
+    <textarea id="domains" placeholder="Введите домены каждый с новой строки"></textarea>
   </div>
 
   <div class="progress-container">
@@ -148,14 +149,15 @@
       }
       
       // Обработка формата: 0: "example.com"
-      const match = input.match(/^\s*\d+\s*:\s*"([^"]+)"\s*$/);
-      if (match && match[1]) {
-        return match[1];
+      const matchIndex = input.match(/^\s*\d+\s*:\s*"([^"]+)"\s*$/);
+      if (matchIndex && matchIndex[1]) {
+        return matchIndex[1];
       }
       
-      // Обработка формата: "example.com"
-      if (input.startsWith('"') && input.endsWith('"')) {
-        return input.slice(1, -1);
+      // Обработка формата: "example.com",
+      const matchQuotes = input.match(/^\s*"([^"]+)"\s*,?\s*$/);
+      if (matchQuotes && matchQuotes[1]) {
+        return matchQuotes[1];
       }
       
       return input.trim();
@@ -186,7 +188,7 @@
     async function resolveDomains() {
       const domainsText = document.getElementById("domains").value;
       const rawLines = domainsText.split('\n').filter(line => line.trim() !== "");
-      const domains = rawLines.map(normalizeDomain);
+      const domains = rawLines.map(normalizeDomain).filter(domain => domain !== "");
       const format = document.getElementById("format").value;
       const progressContainer = document.querySelector('.progress-container');
       const progressBar = document.getElementById('progressBar');
