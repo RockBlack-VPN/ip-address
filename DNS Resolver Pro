@@ -115,7 +115,7 @@
   <h2>🔍 DNS Resolver Pro</h2>
   
   <div class="input-group">
-    <textarea id="domains" placeholder="Введите домены (каждый с новой строки или в формате: &quot;example.com&quot;, https://example.com)"></textarea>
+    <textarea id="domains" placeholder="Введите домены (каждый с новой строки в формате: example.com, www.example.com, https://example.com)"></textarea>
   </div>
 
   <div class="progress-container">
