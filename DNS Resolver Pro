@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>DNS Resolver Pro</title>
-<style>
+ <style>
     body {
       font-family: 'Helvetica Neue', 'Segoe UI', Arial, sans-serif;
       margin: 0 auto;
@@ -127,6 +127,7 @@
       <option value="standard">Стандартный формат</option>
       <option value="keenetic">Формат Keenetic</option>
       <option value="keenetic_clear">Keenetic Clear</option>
+      <option value="keenetic_ip_min">Keenetic IP Min</option>
     </select>
     <button onclick="resolveDomains()">🚀 Найти IP</button>
     <button onclick="compressIPs()">Сжать IP-адреса</button>
@@ -210,6 +211,47 @@
         }
         output = Array.from(uniqueIPs)
           .map(ip => `route add ${ip} mask 255.255.255.255 0.0.0.0`)
+          .join('\n');
+      } else if (format === "keenetic_ip_min") {
+        const uniqueIPs = new Set();
+        for (let domain of domains) {
+          try {
+            const results = await resolveDomainWithResolvers(domain);
+            results.forEach(result => {
+              if (result.data?.Answer) {
+                result.data.Answer
+                  .filter(ans => ans.type === 1)
+                  .forEach(ans => uniqueIPs.add(ans.data));
+              }
+            });
+          } catch (error) {}
+          processed++;
+          updateProgress();
+        }
+        
+        // Группировка IP в подсети /24
+        const cidrMap = new Map();
+        uniqueIPs.forEach(ip => {
+          if (ip === "0.0.0.0" || ip === "255.255.255.255") return;
+          const octets = ip.split('.').map(Number);
+          const network = `${octets[0]}.${octets[1]}.${octets[2]}.0/24`;
+          cidrMap.set(network, true);
+        });
+
+        // Сортировка подсетей
+        const sortedCidrs = Array.from(cidrMap.keys()).sort((a, b) => {
+          const aParts = a.split('.').map(Number);
+          const bParts = b.split('.').map(Number);
+          for (let i = 0; i < 3; i++) {
+            if (aParts[i] !== bParts[i]) {
+              return aParts[i] - bParts[i];
+            }
+          }
+          return 0;
+        });
+
+        output = sortedCidrs
+          .map(cidr => `route add ${cidr.split('/')[0]} mask 255.255.255.0 0.0.0.0`)
           .join('\n');
       } else {
         for (let domain of domains) {
