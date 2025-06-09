@@ -130,7 +130,6 @@
       <option value="keenetic_ip_min">Keenetic IP Min</option>
     </select>
     <button onclick="resolveDomains()">🚀 Найти IP</button>
-    <button onclick="compressIPs()">Сжать IP-адреса</button>
     <button class="theme-toggle" onclick="toggleTheme()">🌓 Сменить тему</button>
   </div>
 
@@ -321,51 +320,6 @@
 
     function toggleTheme() {
       document.body.classList.toggle('light-mode');
-    }
-
-    function compressIPs() {
-      const text = document.getElementById("result").textContent.trim();
-      const ipRegex = /\b(?:\d{1,3}\.){3}\d{1,3}\b/g;
-      const ips = text.match(ipRegex);
-
-      if (!ips || ips.length === 0) {
-        alert("Нет IP-адресов для сжатия.");
-        return;
-      }
-
-      const cidrMap = new Map();
-      
-      ips.forEach(ip => {
-        const octets = ip.split('.').map(Number);
-        if (ip !== "0.0.0.0" && ip !== "255.255.255.0") {
-          const network = `${octets[0]}.${octets[1]}.${octets[2]}.0/24`;
-          if (!cidrMap.has(network)) {
-            cidrMap.set(network, true);
-          }
-        }
-      });
-
-      if (cidrMap.size === 0) {
-        alert("Нет доступных IP-адресов для сжатия.");
-        return;
-      }
-
-      const sortedCidrs = Array.from(cidrMap.keys()).sort((a, b) => {
-        const aParts = a.split('.').map(Number);
-        const bParts = b.split('.').map(Number);
-        for (let i = 0; i < 3; i++) {
-          if (aParts[i] !== bParts[i]) {
-            return aParts[i] - bParts[i];
-          }
-        }
-        return 0;
-      });
-
-      const output = sortedCidrs
-        .map(cidr => `route add ${cidr.replace('/24', '')} mask 255.255.255.0 0.0.0.0`)
-        .join('\n');
-
-      document.getElementById("result").textContent = output;
     }
   </script>
 </body>
