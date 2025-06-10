@@ -125,10 +125,10 @@
 
   <div class="controls">
     <select id="format">
-      <option value="standard">Стандартный формат</option>
-      <option value="keenetic">Формат Keenetic</option>
-      <option value="keenetic_clear">Keenetic Clear</option>
-      <option value="keenetic_ip_min">Keenetic IP Min</option>
+      <option value="standard">IPv4</option>
+      <option value="keenetic">Keenetic</option>
+      <option value="keenetic_clear">Keenetic route</option>
+      <option value="keenetic_ip_min">Keenetic route Min</option>
     </select>
     <button onclick="resolveDomains()">🚀 Найти IP</button>
     <button onclick="saveToTxt()">💾 Сохранить в TXT</button>
