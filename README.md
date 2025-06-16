@@ -59,7 +59,7 @@ ____
 
 Введите домены и нажмите **Найти IP**
 
-![Screenshot](https://rockblack.pro/images/Screenshot_2.jpg)
+![Screenshot](https://rockblack.pro/images/github/Screenshot_10.jpg)
 
 ____
 
