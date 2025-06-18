@@ -61,6 +61,22 @@ ____
 
 ![Screenshot](https://rockblack.pro/images/github/Screenshot_10.jpg)
 
+**Как найти все домены данного сайта(сервиса)**
+
+Открыть ютуб в хроме, нажать F12 - Перейти во вкладку console, прописать, а не скопировать (так не работает)
+`allow pasting`
+
+Затем эту команду уже скопировать и вставить
+```
+window.domains = [...new Set(performance.getEntriesByType('resource').map(r => (new URL(r.name)).hostname))];
+console.log(domains);
+```
+Полученные домены скопировать и вставить в https://rockblack.pro/ip-address
+
+![Screenshot](https://rockblack.pro/images/github/s12.jpg)
+
+![Screenshot](https://rockblack.pro/images/github/Screenshot_36.jpg)
+
 ____
 
 # DNS DoT
