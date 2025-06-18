@@ -111,4 +111,4 @@ https://yookassa.ru/my/i/aD3025LTifTf/l
 ____
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=RockBlack-VPN/ip-address&type=Date)](https://star-history.com/#RockBlack-VPN/ip-address&Date)
+[![Stargazers over time](https://starchart.cc/RockBlack-VPN/ip-address.svg?variant=adaptive)](https://starchart.cc/RockBlack-VPN/ip-address)
