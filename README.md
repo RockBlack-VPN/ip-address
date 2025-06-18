@@ -99,8 +99,8 @@ ____
 **Если этот проект полезен для вас, вы можете дать ему оценку.**:star2:
 
 <p align="left">
-  <a href="https://buymeacoffee.com/mhsanaei" target="_blank">
-    <img src="./media/buymeacoffe.png" alt="Image">
+  <a href="https://rockblack.pro" target="_blank">
+    <img src="(https://rockblack.pro/images/github/coffee.png" alt="Image">
   </a>
 </p>
 - https://yookassa.ru/my/i/aD3025LTifTf/l
