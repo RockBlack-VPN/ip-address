@@ -100,13 +100,11 @@ ____
 
 <p align="left">
   <a href="https://yookassa.ru/my/i/aD3025LTifTf/l" target="_blank">
-    <img src="https://rockblack.pro/images/github/youkassa.png" alt="YooKassa" width="160">
-  </a>
-  <a href="https://yoomoney.ru/to/4100117689665720" target="_blank">
+    <img src="https://rockblack.pro/images/github/youkassa.png" alt="YooKassa" width="160" style="margin-right: 10px;">
+  </a><a href="https://yoomoney.ru/to/4100117689665720" target="_blank">
     <img src="https://rockblack.pro/images/github/umoney.png" alt="YuMoney" width="160">
   </a>
 </p>
-
 ____
 > [!TIP]
 
