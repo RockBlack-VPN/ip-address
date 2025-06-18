@@ -123,4 +123,4 @@ ____
 ____
 ## Star History
 
-[![Stargazers over time](https://starchart.cc/RockBlack-VPN/ip-address.svg?background=%23FFFFFF&axis=%23333333&line=%2351af97)](https://starchart.cc/RockBlack-VPN/ip-address)
+[![Stargazers over time](https://starchart.cc/RockBlack-VPN/ip-address.svg?background=%23343735&axis=%23333333&line=%2351af97)](https://starchart.cc/RockBlack-VPN/ip-address)
