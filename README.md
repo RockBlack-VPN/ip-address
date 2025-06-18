@@ -65,7 +65,7 @@ ____
 
 Открыть ютуб в хроме, нажать F12 - Перейти во вкладку console, прописать команду `allow pasting` , а не скопировать (так не работает)
 
-Затем следующую команду уже скопировать и вставить
+Затем следующую команду уже скопировать и вставить в console
 ```
 window.domains = [...new Set(performance.getEntriesByType('resource').map(r => (new URL(r.name)).hostname))];
 console.log(domains);
