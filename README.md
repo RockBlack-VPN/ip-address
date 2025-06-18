@@ -55,9 +55,11 @@ ____
 ![Screenshot](https://rockblack.su/images/Screenshot_160.jpg)
 
 ____
-# Поиск ip адресов по доменам https://rockblack.pro/ip-address
+# Поиск ip адресов по доменам 
 
 Введите домены и нажмите **Найти IP**
+https://rockblack.pro/ip-address
+
 
 ![Screenshot](https://rockblack.pro/images/github/Screenshot_10.jpg)
 
