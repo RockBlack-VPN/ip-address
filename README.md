@@ -100,7 +100,7 @@ ____
 
 <p align="left">
   <a href="https://yookassa.ru/my/i/aD3025LTifTf/l" target="_blank">
-    <img src="https://rockblack.pro/images/github/coffee.png" alt="Support this project" width="160">
+    <img src="https://rockblack.pro/images/github/youkassa.png" alt="Support this project" width="160">
   </a>
 </p>
 
