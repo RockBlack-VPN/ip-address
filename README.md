@@ -96,9 +96,7 @@ ____
 ____
 ## Поддержи проект
 
-**Если этот проект полезен для вас, вы можете дать ему оценку.**:star2:
-
-**If this project is helpful to you, consider showing your support** :coffee:
+**Если этот проект полезен для вас, вы можете оказать поддержку** :coffee:
 
 <p align="left">
   <a href="https://yookassa.ru/my/i/aD3025LTifTf/l" target="_blank">
@@ -107,7 +105,7 @@ ____
 </p>
 
 
-
+____
 > [!TIP]
 
 > [VPN на роутер](https://rockblack.pro/price) - WireGuard, AmneziaWG, OpenVPN, Vless, Outline, Socks5
