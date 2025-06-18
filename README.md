@@ -104,6 +104,11 @@ ____
   </a>
 </p>
 
+<p align="left">
+  <a href="https://yoomoney.ru/to/4100117689665720" target="_blank">
+    <img src="https://rockblack.pro/images/github/umoney.png" alt="Support this project" width="160">
+  </a>
+</p>
 
 ____
 > [!TIP]
