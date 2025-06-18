@@ -94,6 +94,7 @@ ____
 
 
 ____
+
 ## Поддержи проект
 
 **Если этот проект полезен для вас, вы можете оказать поддержку** :coffee:
@@ -105,7 +106,9 @@ ____
     <img src="https://rockblack.pro/images/github/umoney.png" alt="YuMoney" width="160">
   </a>
 </p>
+
 ____
+
 > [!TIP]
 
 > [VPN на роутер](https://rockblack.pro/price) - WireGuard, AmneziaWG, OpenVPN, Vless, Outline, Socks5
