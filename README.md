@@ -98,14 +98,13 @@ ____
 
 **Если этот проект полезен для вас, вы можете дать ему оценку.**:star2:
 
+**If this project is helpful to you, consider showing your support** :coffee:
+
 <p align="left">
-  <a href="https://rockblack.pro" target="_blank">
+  <a href="https://yookassa.ru/my/i/aD3025LTifTf/l" target="_blank">
     <img src="https://rockblack.pro/images/github/coffee.png" alt="Support this project" width="160">
   </a>
 </p>
-
-- https://yookassa.ru/my/i/aD3025LTifTf/l
-
 
 
 
