@@ -94,10 +94,21 @@ ____
 
 
 ____
-> [!TIP]
-> > **Вы можете отблагодарить за собранные маршруты**
-https://yookassa.ru/my/i/aD3025LTifTf/l
+## Поддержи проект
 
+**Если этот проект полезен для вас, вы можете дать ему оценку.**:star2:
+
+<p align="left">
+  <a href="https://buymeacoffee.com/mhsanaei" target="_blank">
+    <img src="./media/buymeacoffe.png" alt="Image">
+  </a>
+</p>
+- https://yookassa.ru/my/i/aD3025LTifTf/l
+
+
+
+
+> [!TIP]
 
 > [VPN на роутер](https://rockblack.pro/price) - WireGuard, AmneziaWG, OpenVPN, Vless, Outline, Socks5
 
