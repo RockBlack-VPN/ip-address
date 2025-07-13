@@ -67,7 +67,7 @@ https://rockblack.pro/ip-address
 
 Открыть youtube в Chrome, нажать F12 - Перейти во вкладку console, прописать команду `allow pasting` , а не скопировать (так не работает)
 
-Затем следующую команду уже скопировать и вставить в console
+Затем следующую команду скопировать и вставить в console
 ```
 window.domains = [...new Set(performance.getEntriesByType('resource').map(r => (new URL(r.name)).hostname))];
 console.log(domains);
