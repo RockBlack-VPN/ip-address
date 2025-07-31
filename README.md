@@ -105,7 +105,7 @@ ____
 
 ![Screenshot](https://rockblack.su/images/vless/DNS2.jpg)
 
-Отключить **IPv6**
+Отключить **IPv6** и поставить птичку **Игнорировать DNS провайдера**
 
 ![Screenshot](https://rockblack.pro/images/Screenshot_33.jpg)
 
