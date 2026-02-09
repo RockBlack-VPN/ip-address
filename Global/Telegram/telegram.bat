@@ -1,3 +1,5 @@
+#AS62041,AS59930,AS62014
+#Telegram Messenger Inc
 route add 91.108.4.0 mask 255.255.252.0 0.0.0.0
 route add 91.108.8.0 mask 255.255.252.0 0.0.0.0
 route add 91.108.12.0 mask 255.255.252.0 0.0.0.0
