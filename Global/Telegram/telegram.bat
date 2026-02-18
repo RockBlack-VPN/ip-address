@@ -17,6 +17,25 @@ route add 149.154.172.0 mask 255.255.252.0 0.0.0.0
 route add 185.76.151.0 mask 255.255.255.0 0.0.0.0
 
 # Cloudflare + Digital Ocean
-route add 104.20.26.0 mask 255.255.255.0 0.0.0.0
-route add 172.66.170.0 mask 255.255.255.0 0.0.0.0
-route add 188.166.3.0 mask 255.255.255.0 0.0.0.0
+route add 188.166.0.0 mask 255.255.0.0 0.0.0.0
+route add 104.16.0.0 mask 255.240.0.0 0.0.0.0
+route add 172.64.0.0 mask 255.192.0.0 0.0.0.0
+route add 188.114.96.0 mask 255.255.252.0 0.0.0.0
+
+#Amazon AWS
+route add 3.32.0.0 mask 255.254.0.0 0.0.0.0
+route add 13.248.128.0 mask 255.255.192.0 0.0.0.0
+route add 44.224.0.0 mask 255.254.0.0 0.0.0.0
+route add 52.32.0.0 mask 255.240.0.0 0.0.0.0
+
+#Fastly
+route add 151.101.0.0 mask 255.255.0.0 0.0.0.0
+#Hetzner
+route add 49.12.0.0 mask 255.252.0.0 0.0.0.0
+route add 95.216.0.0 mask 255.254.0.0 0.0.0.0
+
+#OVH
+route add 15.204.0.0 mask 255.254.0.0 0.0.0.0
+
+#Google Cloud
+route add 35.128.0.0 mask 255.192.0.0 0.0.0.0
