@@ -17,7 +17,6 @@ route add 149.154.168.0 mask 255.255.252.0 0.0.0.0
 route add 149.154.172.0 mask 255.255.252.0 0.0.0.0
 route add 185.76.151.0 mask 255.255.255.0 0.0.0.0
 
-
 # Cloudflare + Digital Ocean
 route add 188.166.0.0 mask 255.255.0.0 0.0.0.0
 route add 104.16.0.0 mask 255.240.0.0 0.0.0.0
