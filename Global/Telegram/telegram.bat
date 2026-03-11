@@ -1,5 +1,6 @@
 # AS62041, AS59930, AS62014
 # Telegram Messenger Inc
+route add 91.105.192.0 mask 255.255.254.0 0.0.0.0
 route add 91.108.4.0 mask 255.255.252.0 0.0.0.0
 route add 91.108.8.0 mask 255.255.252.0 0.0.0.0
 route add 91.108.12.0 mask 255.255.252.0 0.0.0.0
@@ -15,6 +16,7 @@ route add 149.154.166.0 mask 255.255.254.0 0.0.0.0
 route add 149.154.168.0 mask 255.255.252.0 0.0.0.0
 route add 149.154.172.0 mask 255.255.252.0 0.0.0.0
 route add 185.76.151.0 mask 255.255.255.0 0.0.0.0
+
 
 # Cloudflare + Digital Ocean
 route add 188.166.0.0 mask 255.255.0.0 0.0.0.0
