@@ -1,0 +1,1 @@
+route add 95.128.40.0 mask 255.255.255.0 0.0.0.0 :: rem Notepad++
