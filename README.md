@@ -195,11 +195,6 @@ console.log(domains);
 
 ---
 
-## 📈 Star History
-
-[![Stargazers over time](https://starchart.cc/RockBlack-VPN/ip-address.svg?variant=adaptive)](https://starchart.cc/RockBlack-VPN/ip-address)
-
----
 
 <div align="center">
 
