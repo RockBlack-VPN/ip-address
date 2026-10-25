@@ -1,6 +1,36 @@
-route ADD 13.67.0.0 MASK 255.255.0.0 0.0.0.0  # Intel Corporation
-route ADD 15.0.0.0 MASK 255.0.0.0 0.0.0.0  # Intel Corporation
-route ADD 64.100.0.0 MASK 255.255.0.0 0.0.0.0  # Intel Corporation
-route ADD 132.163.0.0 MASK 255.255.0.0 0.0.0.0  # Intel Corporation
-route ADD 192.55.52.0 MASK 255.255.255.0 0.0.0.0  # Intel Corporation
-route ADD 198.145.0.0 MASK 255.255.0.0 0.0.0.0  # Intel Corporation
+# Intel Corporation
+route ADD 13.67.0.0 MASK 255.255.0.0 0.0.0.0
+route ADD 15.0.0.0 MASK 255.0.0.0 0.0.0.0
+route ADD 64.100.0.0 MASK 255.255.0.0 0.0.0.0
+route ADD 132.163.0.0 MASK 255.255.0.0 0.0.0.0
+route ADD 192.55.52.0 MASK 255.255.255.0 0.0.0.0
+route ADD 198.145.0.0 MASK 255.255.0.0 0.0.0.0
+
+# ===== Обновление 2026-10-25 =====
+# Новые адреса по DNS-резолвингу доменов сервиса
+route add 2.16.10.0 mask 255.255.255.0 0.0.0.0
+route add 2.16.172.0 mask 255.255.255.0 0.0.0.0
+route add 2.22.50.0 mask 255.255.255.0 0.0.0.0
+route add 3.164.206.0 mask 255.255.255.0 0.0.0.0
+route add 3.168.73.0 mask 255.255.255.0 0.0.0.0
+route add 3.174.46.0 mask 255.255.255.0 0.0.0.0
+route add 3.174.230.0 mask 255.255.255.0 0.0.0.0
+route add 13.33.67.0 mask 255.255.255.0 0.0.0.0
+route add 13.91.95.0 mask 255.255.255.0 0.0.0.0
+route add 13.224.230.0 mask 255.255.255.0 0.0.0.0
+route add 18.244.146.0 mask 255.255.255.0 0.0.0.0
+route add 23.11.206.0 mask 255.255.255.0 0.0.0.0
+route add 23.36.163.0 mask 255.255.255.0 0.0.0.0
+route add 23.47.124.0 mask 255.255.255.0 0.0.0.0
+route add 23.50.131.0 mask 255.255.255.0 0.0.0.0
+route add 23.201.252.0 mask 255.255.255.0 0.0.0.0
+route add 23.211.43.0 mask 255.255.255.0 0.0.0.0
+route add 52.222.236.0 mask 255.255.255.0 0.0.0.0
+route add 104.81.123.0 mask 255.255.255.0 0.0.0.0
+route add 104.82.110.0 mask 255.255.255.0 0.0.0.0
+route add 150.171.109.0 mask 255.255.255.0 0.0.0.0
+route add 150.171.110.0 mask 255.255.255.0 0.0.0.0
+route add 184.25.50.0 mask 255.255.254.0 0.0.0.0
+route add 184.105.99.0 mask 255.255.255.0 0.0.0.0
+route add 192.198.165.0 mask 255.255.255.0 0.0.0.0
+route add 198.175.98.0 mask 255.255.255.0 0.0.0.0

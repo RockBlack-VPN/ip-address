@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>DNS Resolver Pro</title>
-  <link rel="icon" href="https://rockblack.pro/images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔍</text></svg>">
 <style>
     body {
       font-family: 'Helvetica Neue', 'Segoe UI', Arial, sans-serif;
