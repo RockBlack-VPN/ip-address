@@ -16,6 +16,8 @@ route add 8.47.69.0 mask 255.255.255.0 0.0.0.0
 
 # API: api.lovable.dev, lovable-api.com (Google Cloud)
 route add 34.49.40.0 mask 255.255.255.0 0.0.0.0
+# API переехал на 35.190.23.132 — проверено 2026-11-19
+route add 35.190.23.0 mask 255.255.255.0 0.0.0.0
 
 # Превью проектов *.lovableproject.com
 route add 104.18.8.0 mask 255.255.255.0 0.0.0.0
